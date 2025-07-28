@@ -1,0 +1,179 @@
+TYPES OF DECISION MAKING IN PROGRAMMING
+
+Decision-making structures are used to perform different actions based on different conditions.
+
+1. IF
+---------
+Syntax:
+if (condition) {
+    // executes if condition is true
+}
+
+Use:
+- Executes a block if the condition is true.
+
+Example:
+if (a > b) {
+    console.log("A is greater");
+}
+
+2. IF-ELSE
+---------------
+Syntax:
+if (condition) {
+    // executes if condition is true
+} else {
+    // executes if condition is false
+}
+
+Use:
+- Either executes one block or the other based on the condition.
+
+Example:
+if (score >= 40) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}
+
+3. IF-ELSE IF
+---------------------
+Syntax:
+if (condition1) {
+    // executes if condition1 is true
+} else if (condition2) {
+    // executes if condition2 is true
+} else {
+    // executes if none are true
+}
+
+Use:
+- Used for checking multiple conditions one by one.
+
+Example:
+if (marks >= 90) {
+    console.log("Grade A");
+} else if (marks >= 75) {
+    console.log("Grade B");
+} else {
+    console.log("Grade C");
+}
+
+4. NESTED IF
+------------------
+Syntax:
+if (condition1) {
+    if (condition2) {
+        // true for both
+    } else {
+        // condition1 true, condition2 false
+    }
+} else {
+    if (condition3) {
+        // condition1 false, condition3 true
+    } else {
+        // both false
+    }
+}
+
+Use:
+- One `if` block inside another.
+- Useful for dependent decisions.
+
+5. TERNARY OPERATOR
+-------------------------
+Syntax:
+(condition) ? true_result : false_result;
+
+Use:
+- Short form of if-else
+- Used for simple decisions
+
+Example:
+let status = (age >= 18) ? "Adult" : "Minor";
+
+6. SWITCH
+---------------
+Syntax:
+switch (expression) {
+    case value1:
+        // code
+        break;
+    case value2:
+        // code
+        break;
+    case value3:
+        // code
+        break;
+    default:
+        // code
+}
+
+Use:
+- Used when we have multiple fixed choices for one expression
+
+Example:
+let day = 3;
+switch(day) {
+    case 1: console.log("Monday"); break;
+    case 2: console.log("Tuesday"); break;
+    case 3: console.log("Wednesday"); break;
+    default: console.log("Invalid Day");
+}
+
+------------------------------------------------------------
+
+SUMMARY:
+
+| Type         | Use Case                               |
+|--------------|-----------------------------------------|
+| if           | Simple one-condition check              |
+| if-else      | Two-condition decision                  |
+| if-else-if   | Multiple conditions                     |
+| nested if    | One decision inside another             |
+| ternary      | Short one-line decision                 |
+| switch       | Many fixed options for one value check  |
+-------------------------------------------------------------------------------------------
+
+RULES FOR DECISION-MAKING STATEMENTS
+
+1. Conditions Must Return Boolean:
+   - All conditions inside if, else if, or ternary must evaluate to true or false.
+   Example: if (a > b) is valid because it returns a boolean.
+
+2. Curly Braces Are Recommended:
+   - Always use `{ }` even for single-line statements for better readability and to avoid bugs.
+
+3. Else Block Is Optional:
+   - You can use only `if` without `else` if nothing needs to be done when the condition is false.
+
+4. Only One Block Executes:
+   - In if-else-if ladders and switch-case, only the first true matching block will execute.
+
+5. Use `break` in Switch:
+   - Always use `break` after each `case` to prevent fall-through (running multiple cases by mistake).
+
+6. `default` in Switch:
+   - Add a `default` case at the end to handle unexpected values.
+
+7. Nest Carefully:
+   - Avoid too many nested ifs. If logic is too deep, consider using functions or refactoring code.
+
+8. Ternary for Simple Use:
+   - Ternary operators should be used for simple conditions and assignments.
+   - Avoid using nested or complex ternary operations—they reduce readability.
+
+9. No Condition in `else`:
+   - Do not write a condition in the `else` block. `else` always means “if all above conditions fail”.
+
+10. Logical Operators Can Be Used:
+    - You can combine multiple conditions using `&&` (AND), `||` (OR), and `!` (NOT).
+    Example: if (age >= 18 && citizen == true)
+
+------------------------------------------------------------
+
+Best Practice Tip:
+- Keep conditions simple and readable.
+- Comment inside each block if the logic is complex.
+- For repeated checks or large conditions, use `switch` or separate functions.
+

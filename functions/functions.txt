@@ -1,0 +1,68 @@
+ FUNCTIONS
+===========
+ 
+ Definition:
+    A function is a block of code that performs a specific task when called.
+
+ Advantages:
+    - Less coding (avoids repetition)
+    - Reusability (call the same function multiple times)
+    - Easy to debug (errors are isolated inside the function)
+
+ Types of Functions:
+
+1️⃣ Named Function:
+    - Has a name and can be called using that name.
+
+
+function display() {
+    console.log("Hello World!");
+}
+
+display(); // Output: Hello World!
+
+
+2️⃣ Anonymous Function:
+    - Has no name and is usually assigned to a variable.
+
+
+let greet = function() {
+    console.log("Good Morning!");
+};
+
+greet(); // Output: Good Morning!
+
+
+3️⃣ Parameterized Function:
+    - Functions can accept input values (parameters). 
+
+
+function add(x: number, y: number) {
+    console.log("Sum is:", x + y);
+}
+
+add(5, 7); // Output: Sum is: 12
+
+
+4️⃣ Optional Parameter Function:
+    - Parameters that are not mandatory to pass.
+    - Use `?` to mark them optional.
+
+
+function introduce(name: string, age?: number) {
+    if (age !== undefined) {
+        console.log(`My name is ${name} and I am ${age} years old.`);
+    } else {
+        console.log(`My name is ${name}.`);
+    }
+}
+
+introduce("John", 30); // Output: My name is John and I am 30 years old.
+introduce("Alice");    // Output: My name is Alice.
+
+
+Summary:
+    - Use named functions for clarity.
+    - Use anonymous functions for short tasks or callbacks.
+    - Parameters allow passing dynamic data.
+    - Optional parameters make functions flexible.

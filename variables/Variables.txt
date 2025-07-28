@@ -1,0 +1,95 @@
+VARIABLES
+
+Definition:
+  variable is a container which can hold/store the data and lets us access that data when needed.
+
+
+There are three types of variables.
+    - let
+    - var
+    - const
+
+**Q1. What are the differences between var, let, and const?**
+Here's a simple explanation with examples:
+
+---
+
+**LET:**
+
+* `let` is a local scope variable.
+* We use `let` when we want to declare a variable inside a function, block (`{}`), or loop.
+* The variable declared with `let` cannot be accessed outside its block.
+* We can reassign a new value to a `let` variable.
+
+**Example:**
+
+```ts
+function testLet() {
+  let x = 10;
+  if (true) {
+    let x = 20;
+    console.log("Inside block:", x); // 20
+  }
+  console.log("Outside block:", x); // 10
+}
+testLet();
+```
+
+---
+
+**VAR:**
+
+* `var` is a function-scoped variable.
+* It can be accessed outside a loop or block if it is declared inside one.
+* `var` gets hoisted (moved to the top) during execution, which can cause bugs.
+* We can reassign and redeclare a `var` variable.
+
+**Example:**
+
+```ts
+function testVar() {
+  if (true) {
+    var y = 30;
+  }
+  console.log("Outside block:", y); // 30
+}
+testVar();
+```
+
+**Hoisting Example:**
+
+```ts
+console.log(a); // undefined
+var a = 5;
+```
+
+---
+
+**CONST:**
+
+* `const` is used when we want to store a value that won’t change.
+* A `const` variable must be initialized when it is declared.
+* It has block scope like `let`.
+* We **cannot** reassign or redeclare a `const` variable.
+* If the value is an object or array, we can **change its contents**, but not reassign the whole variable.
+
+**Example:**
+
+```ts
+const name = "John";
+// name = "Mike"; // ❌ Error: Assignment to constant variable
+
+const user = { age: 25 };
+user.age = 26; // ✅ Allowed
+console.log(user); // { age: 26 }
+```
+
+---
+
+**Summary Table:**
+
+| Keyword | Scope    | Reassignable | Redeclarable | Hoisted | Must Initialize |
+| ------- | -------- | ------------ | ------------ | ------- | --------------- |
+| var     | Function | Yes          | Yes          | Yes     | No              |
+| let     | Block    | Yes          | No           | No      | No              |
+| const   | Block    | No           | No           | No      | Yes             |

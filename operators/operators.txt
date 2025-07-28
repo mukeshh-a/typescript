@@ -1,0 +1,72 @@
+OPERATORS AND INCREMENT/DECREMENT IN CLASS
+
+Rules and Explanation:
+
+- Post-increment (a++): Uses the value first, then increases it
+- Pre-increment (++a): Increases the value first, then uses it
+- Post-decrement (a--): Uses the value first, then decreases it
+- Pre-decrement (--a): Decreases the value first, then uses it
+
+Example using a class:
+
+class Conti {
+    oper() {
+        var a = 20;
+        console.log(a);    // Output: 20
+        console.log(a++);  // Output: 20 → becomes 21
+        console.log(a++);  // Output: 21 → becomes 22
+        console.log(++a);  // Output: 23
+        console.log(a--);  // Output: 23 → becomes 22
+        console.log(a++);  // Output: 22 → becomes 23
+        console.log(--a);  // Output: 22
+    }
+}
+
+var o2 = new Conti();
+o2.oper();
+
+-------------------------------------------------------
+
+ARITHMETIC OPERATORS IN JAVASCRIPT/TS
+
+Rules:
+- Used for performing math operations on variables.
+- Commonly used in calculations, loops, and data logic.
+
+Operators:
++  : Addition  
+-  : Subtraction  
+*  : Multiplication  
+/  : Division  
+%  : Modulus (Remainder)
+
+Example:
+
+let a = 10;
+let b = 3;
+
+let sum = a + b;
+console.log("Sum:", sum);  // Output: 13
+
+let diff = a - b;
+console.log("Difference:", diff);  // Output: 7
+
+let product = a * b;
+console.log("Product:", product);  // Output: 30
+
+let division = a / b;
+console.log("Division:", division);  // Output: 3.333...
+
+let remainder = a % b;
+console.log("Remainder:", remainder);  // Output: 1
+
+-------------------------------------------------------
+
+Summary:
+
+Post-increment (a++): First use the value, then increase it  
+Pre-increment (++a): First increase the value, then use it  
+Post-decrement (a--): First use the value, then decrease it  
+Pre-decrement (--a): First decrease the value, then use it
+
+These operators are useful in loops, counters, and calculations.

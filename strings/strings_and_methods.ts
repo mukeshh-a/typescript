@@ -1,0 +1,47 @@
+// var firstname: string = "Harry";
+// console.log(firstname);
+
+// var city: string = 'Pune';
+// console.log(city);
+
+// var message: string = Hello World;
+// console.log(message);
+
+// var lastname: string = "Potter";
+// console.log(lastname);
+
+// console.log(firstname+"James"+lastname);
+
+// console.log(${firstname}James${lastname});
+
+// var fn: string = "Harry Potter";
+// console.log(fn.charAt(6));
+
+// var x: string = "David";
+// var y: string = "Warner";
+
+// var z: string = x.concat(" ").concat(y);
+// console.log(z);
+
+// var r1: number = fn.length;
+// console.log(Number of chars in given string is ${r1});
+
+// var r2: string = fn.toUpperCase();
+// console.log(r2);
+
+// var r3: string = fn.toLowerCase();
+// console.log(r3);
+
+
+// var dia = "Tarikh pe tarikh, tarikh pe tarikh, tarikh pe tarikh, tarikh pe tarikh milti rahi hai, lekin insaaf nahi mila my lord, insaaf nahi mila. Mili hai toh sirf yeh tarikh.";
+// var r4: number = dia.indexOf("tarikh");
+// console.log(r4);
+
+// var r5 : string = fn.replace("Harry","James");
+// console.log(r5);
+
+
+function reverse_string() {
+    var s: string = " Harry Potter"
+    
+}

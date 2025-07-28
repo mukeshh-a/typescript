@@ -1,0 +1,99 @@
+LOOP STATEMENTS IN TYPESCRIPT
+
+Definition:
+Loop statements are used to execute a block of code repeatedly as long as a certain condition is true.
+
+Purpose:
+Used when we want to perform repetitive tasks like printing values, iterating through arrays, calculating totals, etc.
+
+------------------------------------------------------------
+
+TYPES OF LOOPS:
+
+1. FOR LOOP (Used for Fixed Iteration)
+--------------------------------------
+- Runs when we know in advance how many times to loop.
+- Contains 3 parts: initialization, condition, and increment/decrement.
+
+Syntax:
+for (initialization; condition; update) {
+    // code to execute
+}
+
+Example:
+for (let i = 1; i <= 5; i++) {
+    console.log("Count:", i);
+}
+// Output: 1 2 3 4 5
+
+Rules:
+- Best for counter-based loops.
+- Loop stops when the condition becomes false.
+
+------------------------------------------------------------
+
+2. WHILE LOOP (Used for Unknown Iteration)
+------------------------------------------
+- Runs as long as the condition is true.
+- Condition is checked before entering the loop.
+
+Syntax:
+while (condition) {
+    // code to execute
+}
+
+Example:
+let count = 1;
+while (count <= 3) {
+    console.log("Hello", count);
+    count++;
+}
+// Output: Hello 1, Hello 2, Hello 3
+
+Rules:
+- Used when we don't know how many times the loop will run.
+- Condition must be updated inside the loop to avoid infinite loop.
+
+------------------------------------------------------------
+
+3. DO-WHILE LOOP (Runs At Least Once)
+-------------------------------------
+- Similar to `while`, but the code runs **once** before the condition is checked.
+- Useful when the block must execute at least one time.
+
+Syntax:
+do {
+    // code to execute
+} while (condition);
+
+Example:
+let num = 1;
+do {
+    console.log("Run:", num);
+    num++;
+} while (num <= 2);
+// Output: Run 1, Run 2
+
+Rules:
+- Runs the loop body first, then checks the condition.
+- Always executes at least once, even if the condition is false.
+
+------------------------------------------------------------
+
+GENERAL RULES FOR LOOPS:
+
+- Avoid infinite loops: Always update your loop variable.
+- Use `break` to exit a loop early.
+- Use `continue` to skip the current loop iteration.
+- Make sure the loop condition will eventually become false.
+
+------------------------------------------------------------
+
+USE CASE SUMMARY:
+
+| Loop Type   | When to Use                             |
+|-------------|------------------------------------------|
+| for         | When number of repetitions is known      |
+| while       | When number of repetitions is unknown    |
+| do-while    | When loop must run at least once         |
+

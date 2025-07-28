@@ -1,0 +1,8 @@
+PRINT STATEMENT
+
+- To print anything in TypeScript we use console.log() and 
+- whatever we want to print goes inside the brackets.
+- EXAMPLE: console.log("Hello World")
+- EXAMPLE: console.log('Hello World')
+- EXAMPLE: console.log(2000)
+- EXAMPLE: console.log(20.10)
