@@ -11,3 +11,15 @@ else {
     console.log("Odd Number");
     
 }
+
+function even_number_check(n: number)  {
+    if(n%2 != 0){
+        console.log("odd");
+        
+    }
+    else {
+        console.log("even");
+        
+    }
+}
+even_number_check(12);
