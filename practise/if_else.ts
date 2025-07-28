@@ -24,3 +24,4 @@ function even_number_check(n: number)  {
 }
 even_number_check(12);
 even_number_check(15);
+even_number_check(7);
